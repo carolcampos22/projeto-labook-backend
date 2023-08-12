@@ -1,9 +1,9 @@
 # Projeto Labook
 O Labook é uma rede social com o objetivo de promover a conexão e interação entre pessoas. Quem se cadastrar no aplicativo poderá criar e curtir publicações.
 
-Agora que temos as bases de criação de APIs e banco de dados, o próximo nível é a implementação de segurança e códigos mais escaláveis. Veremos durante o prazo de entrega desse projeto inúmeros conceitos e formas de desenvolvimento seguindo padrões de design e arquitetura, e seu desafio será unir as funcionalidades com as boas práticas de código.
+#### Projeto backend em desenvolvimento 
 
-# Conteúdos abordados
+# Conteúdos abordados (ou serão)
 - NodeJS
 - Typescript
 - Express
@@ -17,13 +17,9 @@ Agora que temos as bases de criação de APIs e banco de dados, o próximo níve
 - Roteamento
 - Postman
 
-# Banco de dados
-![projeto-labook (2)](https://user-images.githubusercontent.com/29845719/216036534-2b3dfb48-7782-411a-bffd-36245b78594e.png)
 
-https://dbdiagram.io/d/63d16443296d97641d7c1ae1
-
-# Lista de requisitos
-- Documentação Postman de todos os endpoints (obrigatória para correção)
+# Funcionalidades 
+- Documentação Postman de todos os endpoints (o link será disponibilizado futuramente)
 
 - Endpoints
     - [ ]  signup
@@ -44,15 +40,14 @@ https://dbdiagram.io/d/63d16443296d97641d7c1ae1
     - [ ]  Arquitetura em camadas
     - [ ]  Roteadores no Express
 
-- README.md
 
 # Token payload e User roles
-O enum de roles e o payload do token JWT devem estar no seguinte formato:
+O enum de roles e o payload do token JWT estarão seguinte formato:
 ```typescript
 export enum USER_ROLES {
     NORMAL = "NORMAL",
     ADMIN = "ADMIN"
-}
+} //encontrado no material "Aprofundando em Typescript"
 
 export interface TokenPayload {
     id: string,
@@ -213,14 +208,4 @@ Caso dê um dislike em um post que tenha dado like, o dislike sobrescreve o like
 // status 200 OK
 ```
 
-### Para entender a tabela likes_dislikes
-- no SQLite, lógicas booleanas devem ser controladas via 0 e 1 (INTEGER)
-- quando like valer 1 na tabela é porque a pessoa deu like no post
-    - na requisição like é true
-    
-- quando like valer 0 na tabela é porque a pessoa deu dislike no post
-    - na requisição like é false
-    
-- caso não exista um registro na tabela de relação, é porque a pessoa não deu like nem dislike
-- caso dê like em um post que já tenha dado like, o like é removido (deleta o item da tabela)
-- caso dê dislike em um post que já tenha dado dislike, o dislike é removido (deleta o item da tabela)
+
