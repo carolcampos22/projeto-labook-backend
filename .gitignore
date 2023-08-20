@@ -1,4 +1,5 @@
-/node_modules
-**/*.db
 .env
-/build
+node_modules
+build
+.DS_Store
+*.db
