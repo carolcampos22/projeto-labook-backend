@@ -8,6 +8,17 @@ export interface PostsDB {
     updated_at: string
 }
 
+export interface PostsDBWithCreatorName {
+    id: string,
+    creator_id: string,
+    content: string,
+    likes: number,
+    dislikes: number,
+    created_at: string,
+    updated_at: string,
+    creator_name: string
+}
+
 export interface PostsModel {
     id: string,
     content: string,
@@ -21,7 +32,7 @@ export interface PostsModel {
     }
 }
 
-export class Posts {
+export class Post {
     constructor(
         private id: string,
         private content: string,
