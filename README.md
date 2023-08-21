@@ -106,7 +106,7 @@ Endpoint protegido, requer um token jwt para acessá-lo.
 
 // response
 // status 201 CREATED
-```
+``` 
 
 
 ## Get posts
