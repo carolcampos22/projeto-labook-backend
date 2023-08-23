@@ -42,6 +42,10 @@ VALUES
     ("u003","Caio Cézar", "cezar9840958@hotmail.com", "$2a$12$jNIp3gROjKJuUB1bVd7kbO96KZK83JdeB.cDJjRPU4RCXz6NG9ife
 ", "NORMAL");--senha 47389oiwo
 
+INSERT INTO users(id, name, email, password, role)
+VALUES  
+    ("u004", "Astrodev", "astro@email.com", "$2a$12$kAW9Gux58tiTFlvn4vu1AOPs3FxWJB0vBFNMUH.BYUyNQBTd62U.C", "ADMIN")
+
 INSERT INTO posts(id, creator_id, content)
 VALUES
     ("p001", "u001", "Partiu Região dos Lagos!"),
