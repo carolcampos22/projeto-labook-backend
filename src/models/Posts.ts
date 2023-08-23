@@ -32,6 +32,18 @@ export interface PostsModel {
     }
 }
 
+export interface LikeOrDislikeDB {
+    user_id: string,
+    post_id: string,
+    like: number
+
+}
+
+export enum POST_LIKE {
+    LIKED = "LIKED",
+    DISLIKED = "DISLIKED"
+}
+
 export class Post {
     constructor(
         private id: string,
@@ -66,6 +78,22 @@ export class Post {
 
     public setLikes(value: number): void {
         this.likes = value
+    }
+
+    public addLike = (): void => {
+        this.likes++
+    }
+
+    public removeLike = (): void => {
+        this.likes--
+    }
+
+    public addDislike = (): void => {
+        this.dislikes++
+    }
+
+    public removeDislike = (): void => {
+        this.dislikes--
     }
 
     public getDislikes(): number {
