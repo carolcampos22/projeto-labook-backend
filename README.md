@@ -3,7 +3,7 @@ O Labook é uma rede social com o objetivo de promover a conexão e interação 
 
 #### Projeto backend em desenvolvimento 
 
-# Conteúdos abordados (ou serão)
+# Conteúdos abordados
 - NodeJS
 - Typescript
 - Express
@@ -19,7 +19,7 @@ O Labook é uma rede social com o objetivo de promover a conexão e interação 
 
 
 # Funcionalidades 
-- Documentação Postman de todos os endpoints (o link será disponibilizado futuramente)
+- [Documentação](https://documenter.getpostman.com/view/26570634/2s9Y5VV4wk) Postman de todos os endpoints
 
 - Endpoints
     - [ ]  signup
@@ -41,20 +41,8 @@ O Labook é uma rede social com o objetivo de promover a conexão e interação 
     - [ ]  Roteadores no Express
 
 
-# Token payload e User roles
-O enum de roles e o payload do token JWT estarão seguinte formato:
-```typescript
-export enum USER_ROLES {
-    NORMAL = "NORMAL",
-    ADMIN = "ADMIN"
-} //encontrado no material "Aprofundando em Typescript"
-
-export interface TokenPayload {
-    id: string,
-    name: string,
-    role: USER_ROLES
-}
-```
+### Estrutura das pastas
+![](./src/assets/estrutura-de-pastas.png)
 
 # Exemplos de requisição
 
@@ -207,5 +195,6 @@ Caso dê um dislike em um post que tenha dado like, o dislike sobrescreve o like
 // response
 // status 200 OK
 ```
+
 
 
